@@ -24,7 +24,7 @@ class ContentViewController: UIViewController, UIPageViewControllerDataSource, U
         pageViewController!.dataSource = self
         pageViewController!.delegate = self
         
-        let startingViewController: PreViewController = viewControllerAtIndex(index: 0)!
+        let startingViewController: PreViewController = viewControllerAtIndex(index: currentIndex)!
         let viewControllers = [startingViewController]
         pageViewController!.setViewControllers(viewControllers , direction: .forward, animated: false, completion: nil)
         pageViewController!.view.frame = view.bounds
@@ -81,6 +81,8 @@ class ContentViewController: UIViewController, UIPageViewControllerDataSource, U
         vc.pageIndex = index
         vc.items = self.pages
         currentIndex = index
+        
+        vc.view.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
         return vc
     }
     
@@ -89,9 +91,6 @@ class ContentViewController: UIViewController, UIPageViewControllerDataSource, U
         let startingViewController: PreViewController = viewControllerAtIndex(index: position)!
         let viewControllers = [startingViewController]
         pageViewController!.setViewControllers(viewControllers , direction: .forward, animated: true, completion: nil)
-        
-//        let viewController = self.viewControllerList[position]
-//        setViewControllers([viewController], direction: UIPageViewControllerNavigationDirection.forward, animated: true, completion: nil)
     }
     
     // MARK: - Button Actions

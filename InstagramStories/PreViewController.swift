@@ -27,22 +27,17 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Do any additional setup after loading the view.
+        self.userProfileImage.layer.cornerRadius = self.userProfileImage.frame.size.height / 2;
+        userProfileImage.image = UIImage(named: items[pageIndex]["pro-image"] as! String)
+        lblUserName.text = items[pageIndex]["name"] as? String
         item = self.items[pageIndex]["items"] as! [[String : String]]
         
         SPB = SegmentedProgressBar(numberOfSegments: self.item.count, duration: 5)
         if #available(iOS 11.0, *) {
-            SPB.frame = CGRect(x: 18, y: UIApplication.shared.statusBarFrame.height + 5, width: view.frame.width - 35, height: 4)
+            SPB.frame = CGRect(x: 18, y: UIApplication.shared.statusBarFrame.height + 5, width: view.frame.width - 35, height: 3)
         } else {
             // Fallback on earlier versions
-            SPB.frame = CGRect(x: 18, y: 15, width: view.frame.width - 35, height: 4)
+            SPB.frame = CGRect(x: 18, y: 15, width: view.frame.width - 35, height: 3)
         }
         
         SPB.delegate = self
@@ -52,14 +47,26 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
         view.addSubview(SPB)
         view.bringSubview(toFront: SPB)
         
-        print(item)
-        self.SPB.startAnimation()
-        playVideoOrLoadImage(index: 0)
+        let tapGestureImage = UITapGestureRecognizer(target: self, action: #selector(self.tapOn(_:)))
+        tapGestureImage.numberOfTapsRequired = 1
+        tapGestureImage.numberOfTouchesRequired = 1
+        imagePreview.addGestureRecognizer(tapGestureImage)
+        
+        let tapGestureVideo = UITapGestureRecognizer(target: self, action: #selector(self.tapOn(_:)))
+        tapGestureVideo.numberOfTapsRequired = 1
+        tapGestureVideo.numberOfTouchesRequired = 1
+        videoView.addGestureRecognizer(tapGestureVideo)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        SPB.startAnimation()
+        playVideoOrLoadImage(index: 0)
+        
+        UIView.animate(withDuration: 0.8) {
+            self.view.transform = .identity
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -80,13 +87,16 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
     
     //2
     func segmentedProgressBarFinished() {
-        print("Now showing index: \(pageIndex)")
         if pageIndex == (self.items.count - 1) {
             self.dismiss(animated: true, completion: nil)
         }
         else {
             _ = ContentViewControllerVC.goNextPage(fowardTo: pageIndex + 1)
         }
+    }
+    
+    @objc func tapOn(_ sender: UITapGestureRecognizer) {
+        SPB.skip()
     }
     
     //MARK: - Play or show image

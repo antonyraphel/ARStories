@@ -18,20 +18,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view, typically from a nib.
         
         userArr = [
-            ["name" : "Amira", "pro-image" : "header2.jpg",
+            ["name" : "Amira", "pro-image" : "placeHolder",
                  "items": [["content" : "image", "item" : "img-1"], ["content" : "image", "item" : "img-2"]]],
-            ["name" : "Keila Maney", "pro-image" : "header2.jpg",
-                 "items": [["content" : "image", "item" : "img-1"], ["content" : "video", "item" : "output"], ["content" : "video", "item" : "output2"]]],
-            ["name" : "Gilberto", "pro-image" : "header2.jpg",
-                 "items": [["content" : "image", "item" : "img-1"], ["content" : "image", "item" : "img-2"]]],
-            ["name" : "Jonathan", "pro-image" : "header2.jpg",
+            ["name" : "Keila Maney", "pro-image" : "placeHolder",
+                 "items": [["content" : "image", "item" : "img-3"], ["content" : "video", "item" : "output"], ["content" : "video", "item" : "output2"]]],
+            ["name" : "Gilberto", "pro-image" : "placeHolder",
+                 "items": [["content" : "video", "item" : "output3"], ["content" : "image", "item" : "img-4"], ["content" : "image", "item" : "img-5"], ["content" : "video", "item" : "output"]]],
+            ["name" : "Jonathan", "pro-image" : "placeHolder",
                  "items": [["content" : "image", "item" : "img-1"], ["content" : "video", "item" : "output2"]]],
-            ["name" : "Delmer", "pro-image" : "header2.jpg",
-                 "items": [["content" : "image", "item" : "img-1"], ["content" : "image", "item" : "img-2"]]],
-            ["name" : "Carolyne", "pro-image" : "header2.jpg",
-                 "items": [["content" : "video", "item" : "output"], ["content" : "image", "item" : "img-2"]]],
-            ["name" : "Sabine", "pro-image" : "header2.jpg",
-                 "items": [["content" : "video", "item" : "output2"], ["content" : "image", "item" : "img-2"]]],
+            ["name" : "Delmer", "pro-image" : "placeHolder",
+                 "items": [["content" : "image", "item" : "img-2"], ["content" : "video", "item" : "output"], ["content" : "image", "item" : "img-3"]]],
+            ["name" : "Carolyne", "pro-image" : "placeHolder",
+                 "items": [["content" : "video", "item" : "output"], ["content" : "image", "item" : "img-4"]]],
+            ["name" : "Sabine", "pro-image" : "placeHolder",
+                 "items": [["content" : "video", "item" : "output2"], ["content" : "image", "item" : "img-5"], ["content" : "video", "item" : "output3"]]],
         ]
     }
 
@@ -58,7 +58,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! usersCollectionViewCell
         
-        cell.imgView.image = UIImage(named: "Product-img")
+        cell.imgView.image = UIImage(named: userArr[indexPath.row]["pro-image"] as! String)
         cell.lblUserName.text = userArr[indexPath.row]["name"]! as? String
         
         return cell
@@ -71,6 +71,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ContentView") as! ContentViewController
             vc.modalPresentationStyle = .overFullScreen
             vc.pages = self.userArr
+            vc.currentIndex = indexPath.row
             self.present(vc, animated: true, completion: nil)
         }
     }
