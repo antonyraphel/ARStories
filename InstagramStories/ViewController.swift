@@ -18,19 +18,17 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Do any additional setup after loading the view, typically from a nib.
         
         userArr = [
-            ["name" : "Amira", "pro-image" : "placeHolder",
-                 "items": [["content" : "image", "item" : "img-1"], ["content" : "image", "item" : "img-2"]]],
-            ["name" : "Keila Maney", "pro-image" : "placeHolder",
+            ["name" : "Keila Maney", "pro-image" : "pro-img-3",
                  "items": [["content" : "image", "item" : "img-3"], ["content" : "video", "item" : "output"], ["content" : "video", "item" : "output2"]]],
-            ["name" : "Gilberto", "pro-image" : "placeHolder",
+            ["name" : "Gilberto", "pro-image" : "pro-img-1",
                  "items": [["content" : "video", "item" : "output3"], ["content" : "image", "item" : "img-4"], ["content" : "image", "item" : "img-5"], ["content" : "video", "item" : "output"]]],
-            ["name" : "Jonathan", "pro-image" : "placeHolder",
+            ["name" : "Jonathan", "pro-image" : "pro-img-2",
                  "items": [["content" : "image", "item" : "img-1"], ["content" : "video", "item" : "output2"]]],
-            ["name" : "Delmer", "pro-image" : "placeHolder",
+            ["name" : "Delmer", "pro-image" : "pro-img-4",
                  "items": [["content" : "image", "item" : "img-2"], ["content" : "video", "item" : "output"], ["content" : "image", "item" : "img-3"]]],
-            ["name" : "Carolyne", "pro-image" : "placeHolder",
+            ["name" : "Carolyne", "pro-image" : "pro-img-3",
                  "items": [["content" : "video", "item" : "output"], ["content" : "image", "item" : "img-4"]]],
-            ["name" : "Sabine", "pro-image" : "placeHolder",
+            ["name" : "Sabine", "pro-image" : "pro-img-5",
                  "items": [["content" : "video", "item" : "output2"], ["content" : "image", "item" : "img-5"], ["content" : "video", "item" : "output3"]]],
         ]
     }
