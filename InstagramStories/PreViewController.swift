@@ -42,6 +42,8 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
         SPB.topColor = UIColor.white
         SPB.bottomColor = UIColor.white.withAlphaComponent(0.25)
         SPB.padding = 2
+        SPB.isPaused = true
+        SPB.currentAnimationIndex = 0
         view.addSubview(SPB)
         view.bringSubview(toFront: SPB)
         
@@ -68,8 +70,17 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
         super.viewDidAppear(animated)
         
         DispatchQueue.main.async {
+            self.SPB.currentAnimationIndex = 0
             self.SPB.startAnimation()
             self.playVideoOrLoadImage(index: 0)
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        DispatchQueue.main.async {
+            self.SPB.currentAnimationIndex = 0
+            self.SPB.isPaused = true
         }
     }
 

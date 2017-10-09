@@ -53,7 +53,7 @@ class SegmentedProgressBar: UIView {
     private var segments = [Segment]()
     var duration: TimeInterval
     private var hasDoneLayout = false // hacky way to prevent layouting again
-    private var currentAnimationIndex = 0
+    var currentAnimationIndex = 0
     
     init(numberOfSegments: Int, duration: TimeInterval = 5.0) {
         self.duration = duration

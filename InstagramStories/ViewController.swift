@@ -27,7 +27,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             ["name" : "Delmer", "pro-image" : "pro-img-4",
                  "items": [["content" : "image", "item" : "img-2"], ["content" : "video", "item" : "output"], ["content" : "image", "item" : "img-3"]]],
             ["name" : "Carolyne", "pro-image" : "pro-img-3",
-                 "items": [["content" : "video", "item" : "output"], ["content" : "image", "item" : "img-4"]]],
+                 "items": [["content" : "video", "item" : "output"], ["content" : "image", "item" : "img-4"], ["content" : "video", "item" : "output3"], ["content" : "image", "item" : "img-3"]]],
             ["name" : "Sabine", "pro-image" : "pro-img-5",
                  "items": [["content" : "video", "item" : "output2"], ["content" : "image", "item" : "img-5"], ["content" : "video", "item" : "output3"]]],
         ]
