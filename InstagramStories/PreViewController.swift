@@ -19,9 +19,7 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
     var pageIndex : Int = 0
     var items = [[String: Any]]()
     var item = [[String : String]]()
-    
-    fileprivate var SPB: SegmentedProgressBar!
-    
+    var SPB: SegmentedProgressBar!
     var player: AVPlayer!
     
     override func viewDidLoad() {
@@ -60,12 +58,18 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        SPB.startAnimation()
-        playVideoOrLoadImage(index: 0)
-        
+
         UIView.animate(withDuration: 0.8) {
             self.view.transform = .identity
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.async {
+            self.SPB.startAnimation()
+            self.playVideoOrLoadImage(index: 0)
         }
     }
 
@@ -81,7 +85,6 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
     //MARK: - SegmentedProgressBarDelegate
     //1
     func segmentedProgressBarChangedIndex(index: Int) {
-        print("Now showing index: \(index)")
         playVideoOrLoadImage(index: index)
     }
     
@@ -125,7 +128,6 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
                 let asset = AVAsset(url: url)
                 let duration = asset.duration
                 let durationTime = CMTimeGetSeconds(duration)
-                print(durationTime)
                 
                 self.SPB.duration = durationTime
                 self.player.play()
