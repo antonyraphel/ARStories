@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7B10A48E1F873C48000CE741 /* output3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B10A48C1F873C3D000CE741 /* output3.mp4 */; };
-		7B878CD71F864B3B0057056B /* output.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7BF281541F86306A00DDB2E4 /* output.mp4 */; };
-		7B878CD81F864B3F0057056B /* output2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7BF281551F86306A00DDB2E4 /* output2.mp4 */; };
+		7B1C63F61F8B51AD00D13862 /* output.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B1C63F51F8B51A600D13862 /* output.mp4 */; };
+		7B1C63F71F8B51AF00D13862 /* output2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7B1C63F41F8B51A500D13862 /* output2.mp4 */; };
 		7BF2813D1F86119A00DDB2E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2813C1F86119A00DDB2E4 /* AppDelegate.swift */; };
 		7BF2813F1F86119A00DDB2E4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF2813E1F86119A00DDB2E4 /* ViewController.swift */; };
 		7BF281421F86119A00DDB2E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BF281401F86119A00DDB2E4 /* Main.storyboard */; };
@@ -23,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		7B10A48C1F873C3D000CE741 /* output3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = output3.mp4; sourceTree = "<group>"; };
+		7B1C63F41F8B51A500D13862 /* output2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = output2.mp4; sourceTree = "<group>"; };
+		7B1C63F51F8B51A600D13862 /* output.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = output.mp4; sourceTree = "<group>"; };
 		7BF281391F86119A00DDB2E4 /* InstagramStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF2813C1F86119A00DDB2E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7BF2813E1F86119A00DDB2E4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -32,8 +34,6 @@
 		7BF281481F86119A00DDB2E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BF2814F1F8615A900DDB2E4 /* usersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usersCollectionViewCell.swift; sourceTree = "<group>"; };
 		7BF281511F8626C700DDB2E4 /* SegmentedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedProgressBar.swift; sourceTree = "<group>"; };
-		7BF281541F86306A00DDB2E4 /* output.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = output.mp4; path = resources/output.mp4; sourceTree = SOURCE_ROOT; };
-		7BF281551F86306A00DDB2E4 /* output2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = output2.mp4; path = resources/output2.mp4; sourceTree = SOURCE_ROOT; };
 		7BF281561F86368E00DDB2E4 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		7BF281581F8636D400DDB2E4 /* PreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,8 +94,8 @@
 		7BF281531F86305F00DDB2E4 /* videos */ = {
 			isa = PBXGroup;
 			children = (
-				7BF281541F86306A00DDB2E4 /* output.mp4 */,
-				7BF281551F86306A00DDB2E4 /* output2.mp4 */,
+				7B1C63F51F8B51A600D13862 /* output.mp4 */,
+				7B1C63F41F8B51A500D13862 /* output2.mp4 */,
 				7B10A48C1F873C3D000CE741 /* output3.mp4 */,
 			);
 			path = videos;
@@ -162,9 +162,9 @@
 				7BF281471F86119A00DDB2E4 /* LaunchScreen.storyboard in Resources */,
 				7BF281441F86119A00DDB2E4 /* Assets.xcassets in Resources */,
 				7B10A48E1F873C48000CE741 /* output3.mp4 in Resources */,
-				7B878CD81F864B3F0057056B /* output2.mp4 in Resources */,
-				7B878CD71F864B3B0057056B /* output.mp4 in Resources */,
+				7B1C63F61F8B51AD00D13862 /* output.mp4 in Resources */,
 				7BF281421F86119A00DDB2E4 /* Main.storyboard in Resources */,
+				7B1C63F71F8B51AF00D13862 /* output2.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
