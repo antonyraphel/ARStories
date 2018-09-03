@@ -1,8 +1,8 @@
 //
 //  ContentViewController.swift
-//  InstagramStories
+//  ARStories
 //
-//  Created by mac05 on 05/10/17.
+//  Created by Antony Raphel on 05/10/17.
 //
 
 import UIKit
