@@ -69,7 +69,7 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        DispatchQueue.main.async {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.SPB.currentAnimationIndex = 0
             self.SPB.startAnimation()
             self.playVideoOrLoadImage(index: 0)

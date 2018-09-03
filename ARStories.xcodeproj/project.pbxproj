@@ -76,7 +76,7 @@
 				DE8D95ED213DB3050055E6FD /* Main.storyboard */,
 				DE8D95EF213DB3050055E6FD /* videos */,
 				DE8D95F3213DB3050055E6FD /* PreViewController.swift */,
-				DE8D95F4213DB3050055E6FD /* class */,
+				DE8D95F4213DB3050055E6FD /* helper */,
 				DE8D95F7213DB3050055E6FD /* AppDelegate.swift */,
 				DE8D95F8213DB3050055E6FD /* Info.plist */,
 			);
@@ -93,13 +93,13 @@
 			path = videos;
 			sourceTree = "<group>";
 		};
-		DE8D95F4213DB3050055E6FD /* class */ = {
+		DE8D95F4213DB3050055E6FD /* helper */ = {
 			isa = PBXGroup;
 			children = (
 				DE8D95F5213DB3050055E6FD /* SegmentedProgressBar.swift */,
 				DE8D95F6213DB3050055E6FD /* usersCollectionViewCell.swift */,
 			);
-			path = class;
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
