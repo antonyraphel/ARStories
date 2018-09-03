@@ -1,4 +1,4 @@
-# Instagram-stories
+# ARStories
 It is similar like Instagram Stories, to show video or photo directly of the users account.
 
 ## Prerequisites
