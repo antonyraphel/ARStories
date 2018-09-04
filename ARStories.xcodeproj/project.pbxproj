@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE368EFB213E95B7005FA6CD /* ARSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE368EFA213E95B7005FA6CD /* ARSupport.swift */; };
 		DE8D95F9213DB3050055E6FD /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8D95E8213DB3050055E6FD /* ContentViewController.swift */; };
 		DE8D95FA213DB3050055E6FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8D95E9213DB3050055E6FD /* ViewController.swift */; };
 		DE8D95FB213DB3050055E6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8D95EA213DB3050055E6FD /* Assets.xcassets */; };
@@ -19,11 +20,11 @@
 		DE8D9602213DB3050055E6FD /* SegmentedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8D95F5213DB3050055E6FD /* SegmentedProgressBar.swift */; };
 		DE8D9603213DB3050055E6FD /* usersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8D95F6213DB3050055E6FD /* usersCollectionViewCell.swift */; };
 		DE8D9604213DB3050055E6FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8D95F7213DB3050055E6FD /* AppDelegate.swift */; };
-		DE8D9605213DB3050055E6FD /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE8D95F8213DB3050055E6FD /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7BF281391F86119A00DDB2E4 /* ARStories.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARStories.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE368EFA213E95B7005FA6CD /* ARSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARSupport.swift; sourceTree = "<group>"; };
 		DE8D95E8213DB3050055E6FD /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		DE8D95E9213DB3050055E6FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DE8D95EA213DB3050055E6FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +67,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		DE368EF9213E94B7005FA6CD /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				DE368EFA213E95B7005FA6CD /* ARSupport.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
 		DE8D95E7213DB3050055E6FD /* ARStories */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,11 +83,12 @@
 				DE8D95EA213DB3050055E6FD /* Assets.xcassets */,
 				DE8D95EB213DB3050055E6FD /* LaunchScreen.storyboard */,
 				DE8D95ED213DB3050055E6FD /* Main.storyboard */,
-				DE8D95EF213DB3050055E6FD /* videos */,
 				DE8D95F3213DB3050055E6FD /* PreViewController.swift */,
-				DE8D95F4213DB3050055E6FD /* helper */,
 				DE8D95F7213DB3050055E6FD /* AppDelegate.swift */,
 				DE8D95F8213DB3050055E6FD /* Info.plist */,
+				DE8D95EF213DB3050055E6FD /* videos */,
+				DE8D95F4213DB3050055E6FD /* helper */,
+				DE368EF9213E94B7005FA6CD /* extension */,
 			);
 			path = ARStories;
 			sourceTree = "<group>";
@@ -129,7 +139,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0940;
 				TargetAttributes = {
 					7BF281381F86119A00DDB2E4 = {
 						CreatedOnToolsVersion = 9.0;
@@ -166,7 +176,6 @@
 				DE8D95FE213DB3050055E6FD /* output.mp4 in Resources */,
 				DE8D95FC213DB3050055E6FD /* LaunchScreen.storyboard in Resources */,
 				DE8D9600213DB3050055E6FD /* output2.mp4 in Resources */,
-				DE8D9605213DB3050055E6FD /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +190,7 @@
 				DE8D95FA213DB3050055E6FD /* ViewController.swift in Sources */,
 				DE8D9601213DB3050055E6FD /* PreViewController.swift in Sources */,
 				DE8D95F9213DB3050055E6FD /* ContentViewController.swift in Sources */,
+				DE368EFB213E95B7005FA6CD /* ARSupport.swift in Sources */,
 				DE8D9602213DB3050055E6FD /* SegmentedProgressBar.swift in Sources */,
 				DE8D9603213DB3050055E6FD /* usersCollectionViewCell.swift in Sources */,
 			);
@@ -222,6 +232,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -229,6 +240,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -279,6 +291,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -286,6 +299,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

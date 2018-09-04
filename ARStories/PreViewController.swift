@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import CoreMedia
 
 class PreViewController: UIViewController, SegmentedProgressBarDelegate {
 
@@ -21,6 +22,7 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
     var item = [[String : String]]()
     var SPB: SegmentedProgressBar!
     var player: AVPlayer!
+    let loader = ImageLoader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +73,7 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             self.SPB.currentAnimationIndex = 0
+            self.SPB.duration = self.getDuration(at: 0)
             self.SPB.startAnimation()
             self.playVideoOrLoadImage(index: 0)
         }
@@ -81,6 +84,7 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
         DispatchQueue.main.async {
             self.SPB.currentAnimationIndex = 0
             self.SPB.isPaused = true
+            self.resetPlayer()
         }
     }
 
@@ -128,6 +132,7 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
                 self.imagePreview.isHidden = true
                 self.videoView.isHidden = false
                 
+                resetPlayer()
                 let url = NSURL.fileURL(withPath: path)
                 self.player = AVPlayer(url: url)
                 
@@ -146,8 +151,33 @@ class PreViewController: UIViewController, SegmentedProgressBarDelegate {
         }
     }
     
+    private func getDuration(at index: Int) -> TimeInterval {
+        var retVal: TimeInterval = 5.0
+        if item[index]["content"] == "image" {
+            retVal = 5.0
+        } else {
+            let moviePath = Bundle.main.path(forResource: item[index]["item"], ofType: "mp4")
+            if let path = moviePath {
+                let url = NSURL.fileURL(withPath: path)
+                let asset = AVAsset(url: url)
+                let duration = asset.duration
+                retVal = CMTimeGetSeconds(duration)
+            }
+        }
+        return retVal
+    }
+    
+    private func resetPlayer() {
+        if player != nil {
+            player.pause()
+            player.replaceCurrentItem(with: nil)
+            player = nil
+        }
+    }
+    
     //MARK: - Button actions
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+        resetPlayer()
     }
 }
