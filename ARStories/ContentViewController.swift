@@ -12,7 +12,7 @@ var ContentViewControllerVC = ContentViewController()
 class ContentViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
 
     var pageViewController : UIPageViewController?
-    var pages = [[String: Any]]()
+    var pages: [UserDetails] = []
     var currentIndex : Int = 0
     
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class ContentViewController: UIViewController, UIPageViewControllerDataSource, U
 
         // Do any additional setup after loading the view.
         ContentViewControllerVC = self
-        pageViewController = self.storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? UIPageViewController
+        pageViewController = storyboard?.instantiateViewController(withIdentifier: "PageViewController") as? UIPageViewController
         pageViewController!.dataSource = self
         pageViewController!.delegate = self
         
@@ -64,7 +64,7 @@ class ContentViewController: UIViewController, UIPageViewControllerDataSource, U
             return nil
         }
         index += 1
-        if (index == self.pages.count) {
+        if (index == pages.count) {
             return nil
         }
         return viewControllerAtIndex(index: index)
@@ -72,14 +72,14 @@ class ContentViewController: UIViewController, UIPageViewControllerDataSource, U
     
     //3
     func viewControllerAtIndex(index: Int) -> PreViewController? {
-        if self.pages.count == 0 || index >= self.pages.count {
+        if pages.count == 0 || index >= pages.count {
             return nil
         }
         
         // Create a new view controller and pass suitable data.
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "PreView") as! PreViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "PreView") as! PreViewController
         vc.pageIndex = index
-        vc.items = self.pages
+        vc.items = pages
         currentIndex = index
         
         vc.view.transform = CGAffineTransform(scaleX: 1.4, y: 1.4)
@@ -95,6 +95,6 @@ class ContentViewController: UIViewController, UIPageViewControllerDataSource, U
     
     // MARK: - Button Actions
     @IBAction func closeAction(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 }

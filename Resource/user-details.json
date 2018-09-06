@@ -1,0 +1,97 @@
+{
+    "userDetails": [
+                    {
+                    "name": "Sabine",
+                    "imageUrl" :"https://randomuser.me/api/portraits/men/82.jpg",
+                    "content": [
+                                {
+                                "type": "video",
+                                "url": "https://storage.googleapis.com/coverr-main/mp4/Travaho.mp4"
+                                },
+                                {
+                                "type": "image",
+                                "url": "https://picsum.photos/640/1136/?image=281"
+                                },
+                                {
+                                "type": "image",
+                                "url": "https://picsum.photos/640/1136/?image=282"
+                                },
+                                {
+                                "type": "video",
+                                "url": "https://storage.googleapis.com/coverr-main/mp4/Beach.mp4"
+                                },
+                                {
+                                "type": "image",
+                                "url": "https://picsum.photos/640/1136/?image=272"
+                                }
+                                ]
+                    },
+                    {"name": "Keila Maney",
+                    "imageUrl" :"https://randomuser.me/api/portraits/women/81.jpg",
+                    "content": [
+                                {
+                                "type": "image",
+                                "url": "https://picsum.photos/640/1136/?image=273"
+                                },
+                                {
+                                "type": "video",
+                                "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"
+                                }
+                                ]
+                    },
+                    {
+                    "name": "Gilberto",
+                    "imageUrl" :"https://randomuser.me/api/portraits/men/36.jpg",
+                    "content": [
+                                {
+                                "type": "video",
+                                "url": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+                                },
+                                {
+                                "type": "image",
+                                "url": "https://picsum.photos/640/1136/?image=277"
+                                },
+                                {
+                                "type": "video",
+                                "url": "https://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_5mb.mp4"
+                                }
+                                ]
+                    },
+                    {
+                    "name": "Jonathan",
+                    "imageUrl" :"https://randomuser.me/api/portraits/men/75.jpg",
+                    "content": [
+                                {
+                                "type": "image",
+                                "url": "https://picsum.photos/640/1136/?image=278"
+                                },
+                                {
+                                "type": "video",
+                                "url": "https://storage.googleapis.com/coverr-main/mp4/It_s%20show%20time.mp4"
+                                },
+                                {
+                                "type": "video",
+                                "url": "https://storage.googleapis.com/coverr-main/mp4/Verticastle.mp4"
+                                }
+                                ]
+                    },
+                    {
+                    "name": "Carolyne",
+                    "imageUrl" :"https://randomuser.me/api/portraits/women/50.jpg",
+                    "content": [
+                                {
+                                "type": "image",
+                                "url": "https://picsum.photos/640/1136/?image=279"
+                                },
+                                {
+                                "type": "image",
+                                "url": "https://picsum.photos/640/1136/?image=280"
+                                },
+                                {
+                                "type": "video",
+                                "url": "https://storage.googleapis.com/coverr-main/webm/ShowT.webm"
+                                }
+                                ]
+                    }
+                    ]
+}
