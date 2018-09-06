@@ -1,6 +1,9 @@
 # ARStories
 It is similar like Instagram Stories, to play the video or show the photo directly of the users account.
 
+<img src="https://media.giphy.com/media/1rP0orpoipBIN0f2E3/giphy.gif" width="264" height="480" align="middle" />
+
+
 ## Getting Started
 ### Prerequisites
 
@@ -12,6 +15,11 @@ To build this demo project using the Instagram-stories for iOS, you need version
 - Swipe forward or backward to see next/previous story.
 - The Progress bars at the top represent elapsed time 0-5 seconds for image and for videos depends on video length.
 - Pressing on close button take you back to the stories list.
+
+### Resources
+
+- [Lorem Picsum](https://picsum.photos/) Just put your image size (width & height) after our URL and you'll get a placeholder. 
+- [Coverr](https://coverr.co/) unique and beautiful video footage.
 
 ## Author
 
